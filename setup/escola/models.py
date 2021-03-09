@@ -1,6 +1,7 @@
 from django.db import models
 
 class Aluno(models.Model):
+    objects = models.Manager() ##Tive que colocar isso por conta de um erro no VSCODE
     nome = models.CharField(max_length=30)
     rg = models.CharField(max_length=9)
     cpf = models.CharField(max_length=11)
@@ -10,6 +11,7 @@ class Aluno(models.Model):
         return self.nome
 
 class Curso(models.Model):
+    objects = models.Manager() ##Tive que colocar isso por conta de um erro no VSCODE
     NIVEL = (
         ('B', 'Básico'),
         ('I', 'Intermediário'),
