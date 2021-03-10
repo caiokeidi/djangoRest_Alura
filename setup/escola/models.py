@@ -26,6 +26,7 @@ class Curso(models.Model):
         return self.descricao
 
 class Matricula(models.Model):
+    objects = models.Manager() ##Tive que colocar isso por conta de um erro no VSCODE
     PERIODO = (
         ('M', 'Matutino'),
         ('V', 'Vespertino'),
